@@ -138,7 +138,7 @@ export default function CycleDetailPage() {
 
                     <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-8">
                         <div className="space-y-4">
-                            <h1 className="text-4xl font-black text-[#364241] tracking-tight">{cycle.name}</h1>
+                            <h1 className="text-3xl font-black text-[#364241] tracking-tight">{cycle.name}</h1>
                             <div className="flex flex-wrap items-center gap-4">
                                 <div className="flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-xl text-sm font-bold text-slate-600 border border-slate-100">
                                     <svg className="w-4 h-4 text-[#48ad51]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
