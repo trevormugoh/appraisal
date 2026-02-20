@@ -56,7 +56,7 @@ export default function DashboardPage() {
             { value: activeCycles.length, label: "Active Cycles", color: "text-[#48ad51]", bg: "bg-green-50" },
             { value: appraisals.length, label: "Total Appraisals", color: "text-[#364241]", bg: "bg-slate-50" },
             { value: pendingReview.length, label: "To Review", color: "text-amber-600", bg: "bg-amber-50" },
-            { value: completed.length, label: "Archived", color: "text-slate-400", bg: "bg-slate-50" },
+            { value: completed.length, label: "Completed", color: "text-slate-400", bg: "bg-slate-50" },
         ]
         : currentUser.role === "employee"
             ? [
@@ -68,7 +68,7 @@ export default function DashboardPage() {
             : [
                 { value: appraisals.length, label: "Team Count", color: "text-[#48ad51]", bg: "bg-green-50" },
                 { value: managerReviewPending.length, label: "Awaiting Me", color: "text-amber-600", bg: "bg-amber-50" },
-                { value: completed.length, label: "Finalized", color: "text-[#364241]", bg: "bg-slate-50" },
+                { value: completed.length, label: "Completed", color: "text-[#364241]", bg: "bg-slate-50" },
                 { value: activeCycles.length, label: "Active Cycles", color: "text-slate-400", bg: "bg-slate-50" },
             ];
 
