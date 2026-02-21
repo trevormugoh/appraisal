@@ -237,7 +237,7 @@ export default function AppraisalDetailPage() {
                                             </div>
                                             <div className="space-y-1 pt-1">
                                                 <h3 className="font-bold text-surface-dark leading-tight">{k.title}</h3>
-                                                {k.description && <p className="text-sm text-slate-500 font-medium italic">{k.description}</p>}
+                                                {k.description && <p className="text-sm text-slate-500 font-medium">{k.description}</p>}
                                                 {k.target && (
                                                     <div className="mt-2 flex items-start gap-2 bg-slate-50/50 p-2.5 rounded-xl border border-slate-100/50">
                                                         <span className="text-[9px] font-black text-primary uppercase tracking-wider mt-0.5">Target:</span>
@@ -276,7 +276,7 @@ export default function AppraisalDetailPage() {
                                                             <span className="text-lg font-black text-surface-dark">{k.employeeScore || "—"}</span>
                                                             <span className="text-xs text-slate-300 font-bold">/ 5</span>
                                                         </div>
-                                                        <p className="text-xs text-slate-500 font-medium italic leading-relaxed">
+                                                        <p className="text-xs text-slate-500 font-medium leading-relaxed">
                                                             {k.employeeComment || "No comment provided"}
                                                         </p>
                                                     </div>
@@ -310,7 +310,7 @@ export default function AppraisalDetailPage() {
                                                             <span className="text-lg font-black text-green-700">{(k as any).hodScore ?? (k as any).HodScore ?? "—"}</span>
                                                             <span className="text-xs text-green-700/30 font-bold">/ 5</span>
                                                         </div>
-                                                        <p className="text-xs text-green-700/70 font-medium italic leading-relaxed">
+                                                        <p className="text-xs text-green-700/70 font-medium leading-relaxed">
                                                             {(k as any).hodComment ?? (k as any).HodComment ?? (appraisal.status < AppraisalStatus.HodReviewSubmitted ? "Awaiting manager review" : "No comment provided")}
                                                         </p>
                                                     </div>
