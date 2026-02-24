@@ -60,7 +60,7 @@ export default function AppraisalsPage() {
             {/* Header Section */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div className="space-y-1">
-                    <h1 className="text-3xl font-black text-surface-dark tracking-tight">{titles[currentUser.role]}</h1>
+                    <h1 className="text-3xl font-bold text-surface-dark tracking-tight">{titles[currentUser.role]}</h1>
                     <p className="text-base text-slate-500 font-medium">
                         {currentUser.role === "hr" && "Overview of all active and past appraisal records across the organization."}
                         {currentUser.role === "employee" && "View your performance history and current appraisal progress."}
@@ -95,7 +95,7 @@ export default function AppraisalsPage() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                         </svg>
                     </div>
-                    <h2 className="text-xl font-black text-surface-dark mb-2">No Appraisals Yet</h2>
+                    <h2 className="text-xl font-bold text-surface-dark mb-2">No Appraisals Yet</h2>
                     <p className="text-slate-500 max-w-sm mx-auto font-medium">
                         {currentUser.role === "hr" ? "You haven't initiated any appraisals for this cycle." : "No appraisals have been assigned to you at this time."}
                     </p>
@@ -112,12 +112,12 @@ export default function AppraisalsPage() {
                             <thead>
                                 <tr className="border-b border-slate-100">
                                     {currentUser.role !== "employee" && (
-                                        <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Employee</th>
+                                        <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Employee</th>
                                     )}
-                                    <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Appraisal Cycle</th>
-                                    <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Current Status</th>
-                                    <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Overall Rating</th>
-                                    <th className="text-right px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Action</th>
+                                    <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Appraisal Cycle</th>
+                                    <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Current Status</th>
+                                    <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Overall Rating</th>
+                                    <th className="text-right px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Action</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-50">
@@ -126,7 +126,7 @@ export default function AppraisalsPage() {
                                         {currentUser.role !== "employee" && (
                                             <td className="px-8 py-5">
                                                 <div className="flex items-center gap-4">
-                                                    <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm font-black ring-1 ring-primary/10 shadow-sm">
+                                                    <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-sm font-bold ring-1 ring-primary/10 shadow-sm">
                                                         {getEmployeeName(a.employeeId).charAt(0)}
                                                     </div>
                                                     <span className="text-sm font-bold text-surface-dark group-hover:text-black transition-colors">{getEmployeeName(a.employeeId)}</span>
@@ -142,19 +142,19 @@ export default function AppraisalsPage() {
                                         <td className="px-8 py-5">
                                             {a.overallRating != null ? (
                                                 <div className="flex items-center gap-2">
-                                                    <span className={`text-base font-black ${a.overallRating >= 4 ? "text-primary" : a.overallRating >= 3 ? "text-amber-500" : "text-red-500"}`}>
+                                                    <span className={`text-base font-bold ${a.overallRating >= 4 ? "text-primary" : a.overallRating >= 3 ? "text-amber-500" : "text-red-500"}`}>
                                                         {a.overallRating.toFixed(1)}
                                                     </span>
                                                     <span className="text-[10px] text-slate-300 font-bold uppercase tracking-widest">/ 5.0</span>
                                                 </div>
                                             ) : (
-                                                <span className="text-slate-300 font-black tracking-widest">—</span>
+                                                <span className="text-slate-300 font-bold tracking-widest">—</span>
                                             )}
                                         </td>
                                         <td className="px-8 py-5 text-right">
                                             <Link
                                                 href={`/dashboard/appraisals/${a.id}`}
-                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 text-slate-600 rounded-xl text-xs font-black hover:bg-surface-dark hover:text-white transition-all duration-300 group/btn"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-100 text-slate-600 rounded-xl text-xs font-bold hover:bg-surface-dark hover:text-white transition-all duration-300 group/btn"
                                             >
                                                 {currentUser.role === "employee" ? "Open Appraisal" : currentUser.role === "manager" ? "Review Now" : "View Details"}
                                                 <svg className="w-3.5 h-3.5 transform group-hover/btn:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

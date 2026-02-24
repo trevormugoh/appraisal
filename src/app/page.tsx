@@ -49,12 +49,12 @@ export default function LandingPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
-            <span className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-500">
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-500">
               qwik<span className="text-primary">pace</span>
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-surface-dark tracking-tight leading-tight mb-3">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-surface-dark tracking-tight leading-tight mb-3">
             Welcome <span className="text-primary">Back</span>
           </h1>
           <p className="text-xs md:text-sm text-slate-500 font-medium leading-relaxed px-4">
@@ -66,7 +66,7 @@ export default function LandingPage() {
         <div className="bg-white/70 backdrop-blur-xl rounded-[32px] md:rounded-[40px] border border-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.08)] p-6 md:p-10 animate-scale-in">
           <form onSubmit={handleLogin} className="space-y-5 md:space-y-6">
             <div>
-              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 ml-1">
+              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 ml-1">
                 Email Address
               </label>
               <input
@@ -80,7 +80,7 @@ export default function LandingPage() {
             </div>
 
             <div>
-              <label className="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2 ml-1">
+              <label className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 ml-1">
                 Password
               </label>
               <input
@@ -96,7 +96,7 @@ export default function LandingPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative w-full bg-surface-dark text-white rounded-xl md:rounded-2xl py-3.5 md:py-4 font-black text-xs md:text-sm uppercase tracking-widest hover:bg-black transition-all duration-300 overflow-hidden disabled:opacity-70"
+              className="group relative w-full bg-surface-dark text-white rounded-xl md:rounded-2xl py-3.5 md:py-4 font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-black transition-all duration-300 overflow-hidden disabled:opacity-70"
             >
               <span className={`flex items-center justify-center gap-2 transition-transform duration-300 ${isLoading ? 'translate-y-[-100%]' : ''}`}>
                 Sign In
@@ -114,7 +114,7 @@ export default function LandingPage() {
 
           {/* Demo Credentials Section */}
           <div className="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-slate-100/50">
-            <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-center text-slate-400 mb-4 md:mb-6">
+            <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-center text-slate-400 mb-4 md:mb-6">
               Quick access demo credentials
             </p>
             <div className="grid grid-cols-3 gap-2 md:gap-3">
@@ -141,7 +141,7 @@ export default function LandingPage() {
                       </svg>
                     )}
                   </div>
-                  <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-slate-500 group-hover:text-primary transition-colors">
+                  <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-primary transition-colors">
                     {role}
                   </span>
                 </button>

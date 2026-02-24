@@ -5,10 +5,10 @@
 :root {
   --sidebar-width: 280px;
   --font-poppins: "Poppins", system-ui, sans-serif;
-  --primary: #48ad51;
-  --primary-dark: #3a9142;
-  --surface-dark: #364241;
-  --bg-main: #f8fafc;
+  --primary: #004d24;
+  --primary-dark: #003d1c;
+  --surface-dark: #004d24;
+  --bg-main: #f9fff5;
 }
 
 * {

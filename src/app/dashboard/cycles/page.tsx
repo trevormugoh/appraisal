@@ -110,12 +110,12 @@ export default function CyclesPage() {
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div className="space-y-1">
-                    <h1 className="text-3xl font-black text-surface-dark tracking-tight">Appraisal Cycles</h1>
+                    <h1 className="text-3xl font-bold text-surface-dark tracking-tight">Appraisal Cycles</h1>
                     <p className="text-base text-slate-500 font-medium tracking-tight">Manage the timeline and status of your performance review periods.</p>
                 </div>
                 <button
                     onClick={openCreate}
-                    className="flex items-center justify-center gap-2 px-5 py-2.5 bg-primary text-white rounded-xl text-xs font-black hover:bg-primary-dark transition-all duration-300 shadow-xl shadow-primary/20 group"
+                    className="flex items-center justify-center gap-2 px-5 py-2.5 bg-primary text-white rounded-xl text-xs font-bold hover:bg-primary-dark transition-all duration-300 shadow-xl shadow-primary/20 group"
                 >
                     <svg className="w-4 h-4 transform group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
@@ -139,7 +139,7 @@ export default function CyclesPage() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5" />
                         </svg>
                     </div>
-                    <h2 className="text-xl font-black text-surface-dark mb-2">No Cycles Found</h2>
+                    <h2 className="text-xl font-bold text-surface-dark mb-2">No Cycles Found</h2>
                     <p className="text-slate-500 max-w-sm mx-auto font-medium mb-10">
                         Get started by creating your first performance appraisal cycle to define the review timeline.
                     </p>
@@ -156,10 +156,10 @@ export default function CyclesPage() {
                         <table className="w-full border-collapse">
                             <thead>
                                 <tr className="border-b border-slate-100">
-                                    <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Cycle Name</th>
-                                    <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Duration</th>
-                                    <th className="text-left px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Status</th>
-                                    <th className="text-right px-8 py-6 text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Operations</th>
+                                    <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Cycle Name</th>
+                                    <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Duration</th>
+                                    <th className="text-left px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Status</th>
+                                    <th className="text-right px-8 py-6 text-[11px] font-bold text-slate-400 uppercase tracking-[0.2em]">Operations</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-slate-50">
@@ -181,7 +181,7 @@ export default function CyclesPage() {
                                             </div>
                                         </td>
                                         <td className="px-8 py-5">
-                                            <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${cycle.isActive ? "bg-green-50 text-green-700" : "bg-slate-100 text-slate-500"}`}>
+                                            <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest ${cycle.isActive ? "bg-green-50 text-green-700" : "bg-slate-100 text-slate-500"}`}>
                                                 <span className={`w-1.5 h-1.5 rounded-full ${cycle.isActive ? "bg-primary animate-pulse" : "bg-slate-400"}`} />
                                                 {cycle.isActive ? "Active Period" : "Inactive"}
                                             </span>
@@ -214,7 +214,7 @@ export default function CyclesPage() {
                     <div className="bg-white rounded-[40px] shadow-2xl p-10 w-full max-w-lg animate-scale-in" onClick={(e) => e.stopPropagation()}>
                         <div className="flex items-center justify-between mb-8">
                             <div className="space-y-1">
-                                <h2 className="text-2xl font-black text-surface-dark tracking-tight">{editingCycle ? "Update Parameters" : "Launch New Cycle"}</h2>
+                                <h2 className="text-2xl font-bold text-surface-dark tracking-tight">{editingCycle ? "Update Parameters" : "Launch New Cycle"}</h2>
                                 <p className="text-sm text-slate-500 font-medium">Define the timeframe for this review period.</p>
                             </div>
                             <button onClick={() => setShowModal(false)} className="w-10 h-10 flex items-center justify-center rounded-2xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-all">
@@ -226,7 +226,7 @@ export default function CyclesPage() {
 
                         <div className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Cycle Branding / Name</label>
+                                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] ml-1">Cycle Branding / Name</label>
                                 <input
                                     type="text"
                                     className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-bold outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
@@ -238,7 +238,7 @@ export default function CyclesPage() {
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Starts On</label>
+                                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] ml-1">Starts On</label>
                                     <input
                                         type="date"
                                         className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-bold outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
@@ -247,7 +247,7 @@ export default function CyclesPage() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] ml-1">Ends On</label>
+                                    <label className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] ml-1">Ends On</label>
                                     <input
                                         type="date"
                                         className="w-full px-6 py-4 bg-slate-50 border border-slate-100 rounded-2xl text-sm font-bold outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
@@ -283,13 +283,13 @@ export default function CyclesPage() {
                                 <button
                                     onClick={handleSave}
                                     disabled={saving || !name || !startDate || !endDate}
-                                    className="flex-1 py-3 bg-primary text-white rounded-xl text-xs font-black hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-xl shadow-primary/20"
+                                    className="flex-1 py-3 bg-primary text-white rounded-xl text-xs font-bold hover:bg-primary-dark disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-xl shadow-primary/20"
                                 >
                                     {saving ? "Processing..." : editingCycle ? "Update Period" : "Launch Cycle"}
                                 </button>
                                 <button
                                     onClick={() => setShowModal(false)}
-                                    className="px-6 py-3 bg-slate-100 text-slate-700 rounded-xl text-xs font-black hover:bg-slate-200 transition-all"
+                                    className="px-6 py-3 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold hover:bg-slate-200 transition-all"
                                 >
                                     Cancel
                                 </button>

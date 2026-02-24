@@ -93,7 +93,7 @@ export function ConfirmationModal({
                         )}
                     </div>
 
-                    <h2 className="text-xl font-black text-surface-dark mb-2 tracking-tight">{title}</h2>
+                    <h2 className="text-xl font-bold text-surface-dark mb-2 tracking-tight">{title}</h2>
                     <p className="text-sm text-slate-500 font-medium leading-relaxed mb-8">
                         {message}
                     </p>

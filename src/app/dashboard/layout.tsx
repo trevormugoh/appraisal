@@ -7,7 +7,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     return (
-        <div className="flex h-screen bg-[#f8fafc] overflow-hidden w-full relative">
+        <div className="flex h-screen bg-[#f9fff5] overflow-hidden w-full relative">
             {/* Sidebar with mobile state */}
             <Sidebar
                 isOpen={isSidebarOpen}
@@ -17,7 +17,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <div className="flex-1 flex flex-col h-full min-w-0 overflow-hidden">
                 {/* Mobile Header */}
                 <header className="lg:hidden flex items-center justify-between px-6 py-4 bg-surface-dark text-white border-b border-white/5 shrink-0">
-                    <div className="text-xl font-black tracking-tight uppercase">
+                    <div className="text-xl font-bold tracking-tight uppercase">
                         qwik<span className="text-primary">pace</span>
                     </div>
                     <button
